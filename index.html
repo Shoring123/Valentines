@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>April &#10084</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        
+        <div id="page1" class="page active">
+            <h1 class="fade-in">Hello</h1>
+            <div class="image-container">
+                <img src="Hello.gif" alt="Hello">
+            </div>
+            <p class="fade-in-delay">My beloved Gang gang &#128571</p>
+            <div class="button-container">
+                <button class="arrow-button" onclick="nextPage(2)">→</button>
+            </div>
+        </div>
+
+        <div id="page2" class="page">
+            <h1 class="fade-in">You might be wondering</h1>
+            <div class="image-container">
+                <img src="Wondering.gif" alt="Wondering">
+            </div>
+            <p class="fade-in-delay">what is this website</p>
+            <div class="button-container">
+                <button class="arrow-button" onclick="prevPage(1)">←</button>
+                <button class="arrow-button" onclick="nextPage(3)">→</button>
+            </div>
+        </div>
+
+        <div id="page3" class="page">
+            <h1 class="fade-in">I made it</h1>
+            <div class="image-container">
+                <img src="Love.jpg" alt="Love">
+            </div>
+            <p class="fade-in-delay">Because I love you &#10084</p>
+            <div class="button-container">
+                <button class="arrow-button" onclick="prevPage(2)">←</button>
+                <button class="arrow-button" onclick="nextPage(4)">→</button>
+            </div>
+        </div>
+
+        <div id="page4" class="page">
+            <p class="fade-in">Let me explain why &#128064</p>
+            <div class="image-container">
+                <img src="Why.jpg" alt="Why">
+            </div>
+            <div class="button-container">
+                <button class="arrow-button" onclick="prevPage(3)">←</button>
+                <button class="arrow-button" onclick="nextPage(5)">→</button>
+            </div>
+        </div>
+
+        <div id="page5" class="page">
+            <p class="fade-in">Your smile</p>
+            <div class="image-container">
+                <img src="Smile.jpg" alt="Smile">
+            </div>
+            <div class="audio-container">
+                <audio controls>
+                    <source src="Smile.m4a" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="button-container">
+                <button class="arrow-button" onclick="prevPage(4)">←</button>
+                <button class="arrow-button" onclick="nextPage(6)">→</button>
+            </div>
+        </div>
+
+        <div id="page6" class="page">
+            <p class="fade-in">Your laugh</p>
+            <div class="image-container">
+                <img src="Laugh.gif" alt="Laugh">
+            </div>
+            <div class="audio-container">
+                <audio controls>
+                    <source src="Laugh.m4a" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="button-container">
+                <button class="arrow-button" onclick="prevPage(5)">←</button>
+                <button class="arrow-button" onclick="nextPage(7)">→</button>
+            </div>
+        </div>
+
+        <div id="page7" class="page">
+            <p class="fade-in">Your lambing</p>
+            <div class="image-container">
+                <img src="Lambing.jpg" alt="Why">
+            </div>
+            <div class="audio-container">
+                <audio controls>
+                    <source src="Lambing.m4a" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="button-container">
+                <button class="arrow-button" onclick="prevPage(6)">←</button>
+                <button class="arrow-button" onclick="nextPage(8)">→</button>
+            </div>
+        </div>
+
+        <div id="page8" class="page">
+            <h1 class="fade-in">Because of that, I ask,</h1>
+            <div class="image-container">
+                <img src="valentine.gif" alt="Cute GIF">
+            </div>
+            <h1 class="fade-in">Will you be my valentine &#128158 ?</h1>
+            <div id="options">
+                <button class="yesno-button" onclick="selectOption('yes')">Yes</button>
+                <button class="yesno-button" onclick="selectOption('no')">No</button>
+            </div>
+        </div>
+
+        <div id="page9" class="page">
+            <h1 class="fade-in">Please?</h1>
+            <div class="image-container">
+                <img src="please.jpg" alt="Cute GIF">
+            </div>
+            <div id="options">
+                <button class="yesno-button" onclick="nextPage(11)">Yes</button>
+                <button class="yesno-button" onclick="nextPage(11)">Yes</button>
+            </div>
+        </div>
+        
+        <div id="page10" class="page">
+            <h1 class="fade-in">Are you sure?</h1>
+            <div class="image-container">
+                <img src="please.jpg" alt="Cute GIF">
+            </div>
+            <div id="options">
+                <button class="yesno-button" onclick="nextPage(11)">Yes</button>
+                <button class="yesno-button" onclick="nextPage(11)">Yes</button>
+            </div>
+        </div>
+         <div id="page11" class="page">
+            <div class="image-container">
+                <img src="Iloveyou.jpg" alt="Why">
+            </div>
+            <p class="fade-in">I love you &#10084</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

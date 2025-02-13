@@ -1,0 +1,199 @@
+:root {
+    --primary-color: rgb(255, 163, 179);
+    --secondary-color: #FB607F;
+    --background-color: #FADADD;
+    --font-size-large: 3.5rem;
+    --font-size-medium: 1.8rem;
+    --font-size-small: 1.2rem;
+    --image-height: 300px;
+    --button-gap: 20px;
+    --arrow-size: 3rem;
+    --pawprint-opacity: 0.3;
+    --glow-color: rgba(255, 163, 179, 0.5);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: -350px;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    background-image: url('pawprint.svg');
+    background-repeat: repeat;
+    background-size: 15%;
+    transform: rotate(-25deg);
+    z-index: -1;
+    opacity: var(--pawprint-opacity);
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+.page {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.page.active {
+    display: flex;
+}
+
+h1 {
+    font-size: var(--font-size-large);
+    font-weight: normal;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+p {
+    font-size: var(--font-size-large);
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    opacity: 0;
+    animation: fadeIn 1s ease-in 0.5s forwards;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: var(--image-height);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px 5px var(--glow-color);
+    transition: box-shadow 0.3s ease;
+}
+
+.image-container img:hover {
+    box-shadow: 0 0 30px 10px var(--glow-color);
+}
+
+.button-container {
+    display: flex;
+    gap: var(--button-gap);
+}
+.yesno-button {
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: var(--font-size-medium);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px 5px rgba(251, 96, 127, 0.3);
+}
+
+.yesno-button:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+    box-shadow: 0 0 25px 10px rgba(251, 96, 127, 0.5);
+}
+
+.yesno-button:active {
+    transform: scale(1);
+    background-color: var(--secondary-color);
+}
+.yesno-button.yes {
+    background-color:var(--primary-color);
+}
+
+.yesno-button.yes:hover {
+    background-color: var(--primary-color);
+}
+
+.yesno-button.no {
+    background-color: var(--primary-color);
+}
+
+.yesno-button.no:hover {
+    background-color: var(--primary-color);
+}
+
+.arrow-button {
+    background: none;
+    border: none;
+    font-size: var(--arrow-size);
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    padding: 0;
+}
+
+.arrow-button:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+.arrow-button.left::after {
+    content: '←';
+}
+
+.arrow-button.right::after {
+    content: '→';
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in forwards;
+}
+
+.fade-in-delay {
+    animation: fadeIn 1s ease-in 0.5s forwards;
+}
+
+.audio-container {
+    height:100%;
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+audio {
+    width: 100%;
+    max-width: 300px; 
+    outline: none;
+    z-index: 1;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: var(--primary-color);
+    border-radius: 10px; 
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-mute-button {
+    filter: brightness(0) invert(1); 
+}
